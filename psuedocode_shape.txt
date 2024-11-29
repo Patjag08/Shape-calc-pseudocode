@@ -1,0 +1,90 @@
+Inputs:
+type of shape
+What are you trying to find
+any values involved with calculations
+
+***Main code:***
+
+pi = 3.142
+type = input()
+calc = input()
+calc_performed = false
+
+if type.lower() == "circle" then
+	if calc.lower() == "area" then
+		result = circle_area()
+		calc_performed = true
+	elseif calc.lower() == "circumference" then
+		result = circle_circ()
+		calc_performed = true
+	else
+		print("Invalid format")
+	endif
+elseif type.lower() == "square" then
+	if calc.lower() == "area" then
+		result = square_area()
+		calc_performed = true
+	elseif calc.lower() == "perimeter" then
+		result = square_perimeter()
+		calc_performed = true
+	else
+		print("Invalid format")
+	endif
+elseif type.lower() == "cuboid" then
+	if calc.lower() == "volume" then
+		result = cube_volume()
+		calc_performed = true
+	elseif calc.lower() == "area" then
+		result = cube_area()
+		calc_performed = true
+	else
+		print("Invalid format")
+	endif
+elseif type.lower() == "help" then
+	print("""Operation of the program is simple:
+	1) Enter the shape you want to perform the operation on.
+	2) Select the operation
+	3) Enter your values
+	You have successfully performed an operation.""")
+elseif type.lower() == "quit" then
+	quit()
+else
+	print("Invalid entry")
+endif
+
+
+***circle_area function:***
+
+r = input()
+return pi*r**2
+
+***circle_circ function:***
+
+r = input()
+return 2*pi*r
+
+***square_area funtion:***
+
+l = input()
+w = input()
+return (l**2)*w
+
+***square_perimeter function:***
+
+l = input()
+return l*4
+
+***cube_volume function:***
+
+l = input()
+w = input()
+h = input()
+return l*w*h
+
+***cube_area function:***
+
+w = input()
+l = input()
+h = input()
+return 2*w*l+2*l*h+2*h*w
+
